@@ -7,22 +7,22 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 " File System Plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
+" Plugin 'rking/ag.vim'
 
 " Git Plugins
 Plugin 'tpope/vim-fugitive'
 
 " Undo Plugin
-Plugin 'sjl/gundo.vim'
+" Plugin 'sjl/gundo.vim'
 
 " Python Plugins
 Plugin 'vim-scripts/indentpython.vim'
@@ -30,16 +30,16 @@ Plugin 'nvie/vim-flake8'
 Plugin 'tmhedberg/SimpylFold'
 
 " Frontend Plugins
-Plugin 'othree/html5.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'othree/xml.vim'
+" Plugin 'othree/html5.vim'
+" Plugin 'othree/javascript-libraries-syntax.vim'
+" Plugin 'othree/xml.vim'
 
 " Color Schemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'sjl/badwolf'
+" Plugin 'jnurmine/Zenburn'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,10 +51,10 @@ syntax on
 
 " Color Schemes & Themes
 set background=dark
-colorscheme gruvbox
-let g:airline_theme='gruvbox'  " airline theme
-set laststatus=2  " airline status bar always on
-let g:airline#extensions#tabline#enabled = 1
+colorscheme molokai
+" let g:airline_theme='molokai'  " airline theme
+" set laststatus=2  " airline status bar always on
+" let g:airline#extensions#tabline#enabled = 1
 let g:gruvbox_contrast_dark='hard'
 
 set mouse=a
@@ -75,10 +75,10 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 inoremap jk <esc>
 
 " toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
+" nnoremap <leader>u :GundoToggle<CR>
 
 " open ag.vim
-nnoremap <leader>a :Ag
+" nnoremap <leader>a :Ag
 
 " CtrlP Plugin
 let g:ctrlp_map = '<c-p>'
@@ -103,8 +103,8 @@ set foldmethod=indent
 set foldlevel=99
 
 " NERDTree Configuration
-let NERDTreeWinSize=35
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+" let NERDTreeWinSize=35
+" nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 " nnoremap <slient> <Leader>n :NERDTreeToggle<CR>
 
 
@@ -113,14 +113,14 @@ nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
 
 " Python with Virtualenv Support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+" py << EOF
+" import os
+" import sys
+" if 'VIRTUAL_ENV' in os.environ:
+"     project_base_dir = os.environ['VIRTUAL_ENV']
+"     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"     execfile(activate_this, dict(__file__=activate_this))
+" EOF
 
 " Backup Settings
 set backup

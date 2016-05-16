@@ -11,6 +11,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " File System Plugins
 Plugin 'scrooloose/nerdtree'
@@ -45,10 +46,10 @@ Plugin 'gosukiwi/vim-atom-dark'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-set t_Co=256
 
 let python_highlight_all=1
 syntax on
+set pastetoggle=<F5>  " Paste without indent issues
 
 " Color Schemes & Themes
 set background=dark
@@ -56,9 +57,9 @@ colorscheme gruvbox
 let g:airline_theme='gruvbox'  " airline theme
 set laststatus=2  " airline status bar always on
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
-set mouse=a
+" set mouse=a
 set encoding=utf-8
 set nu  " Line Numbers
 set splitbelow

@@ -1,3 +1,4 @@
+" Simplier vimrc file for the RPI (slower, less graphics)
 set nocompatible              " required
 filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,8 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " File System Plugins
 " Plugin 'scrooloose/nerdtree'
@@ -38,17 +40,17 @@ Plugin 'tmhedberg/SimpylFold'
 " Plugin 'jnurmine/Zenburn'
 " Plugin 'altercation/vim-colors-solarized'
 " Plugin 'sjl/badwolf'
-" Plugin 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
 " Plugin 'gosukiwi/vim-atom-dark'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-set t_Co=256
 
 let python_highlight_all=1
 syntax on
+set pastetoggle=<F5>  " Paste without indent issues
 
 " Color Schemes & Themes
 set background=dark
@@ -56,9 +58,9 @@ colorscheme gruvbox
 let g:airline_theme='gruvbox'  " airline theme
 set laststatus=2  " airline status bar always on
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 
-set mouse=a
+" set mouse=a
 set encoding=utf-8
 set nu  " Line Numbers
 set splitbelow
@@ -104,8 +106,14 @@ set foldmethod=indent
 set foldlevel=99
 
 " NERDTree Configuration
-" let NERDTreeWinSize=35
-" nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+let NERDTreeWinSize=35
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+" nnoremap <slient> <Leader>n :NERDTreeToggle<CR>
+
+
+" Flag Whitespace
+" au BufNewFile,BufRead *.py, *.pyw, *.c, *.h match BadWhitespace /\s\+$/
+
 
 " Python with Virtualenv Support
 " py << EOF

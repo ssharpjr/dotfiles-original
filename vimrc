@@ -7,23 +7,23 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'christoomey/vim-tmux-navigator'
 
 " File System Plugins
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
+" Plugin 'rking/ag.vim'
 
 " Git Plugins
 Plugin 'tpope/vim-fugitive'
 
 " Undo Plugin
-Plugin 'sjl/gundo.vim'
+" Plugin 'sjl/gundo.vim'
 
 " Python Plugins
 Plugin 'vim-scripts/indentpython.vim'
@@ -36,12 +36,12 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/xml.vim'
 
 " Color Schemes
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
+" Plugin 'jnurmine/Zenburn'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'sjl/badwolf'
+" Plugin 'tomasr/molokai'
 Plugin 'morhetz/gruvbox'
-Plugin 'gosukiwi/vim-atom-dark'
+" Plugin 'gosukiwi/vim-atom-dark'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -1,0 +1,6 @@
+# Tmux settings
+
+# Set Screen key bindings
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix

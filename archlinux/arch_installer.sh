@@ -13,33 +13,13 @@
 #   - Partition 1: up to 500MB (550MB MAX), Type: EFI
 #   - Partition 2: 4GB (or so), Type: Linux Swap
 #   - Partition 3: (Root), Type: Linux EXT4
+# - You have run pacstrap (arch_pacstrap.sh script for example)
+# - You have run genfstab and arch-chroot.
 
+# This script should be in the new /root.
 
 ### BEGIN ###
-
-
-# Sync time
-timedatectl set-ntp true
-
-# Format Partitions (here for reference)
-# mkfs.fat -F32 /dev/sda1
-# mkfs.ext4 -F /dev/sda3
-# mkswap /dev/sda2
-# swapon /dev/sda2
-
-# Mount partitions (here for reference)
-# mount /dev/sda3 /mnt
-# mkdir -p /mnt/efi
-# mount /dev/sda1 /mnt/efi
-
-# Pacstrap the system
-pacstrap /mnt base base-devel vim networkmanager intel-ucode grub efibootmgr git
-
-# Generate the fstab
-genfstab -U /mnt >>/mnt/etc/fstab
-
-# Chroot the system
-arch-chroot /mnt
+NEW_HOSTNAME="archtest"
 
 # Set Locale and Language
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
@@ -53,7 +33,7 @@ cat <<EOF > /etc/hosts
 127.0.1.1    $NEW_HOSTNAME.localdomain $NEW_HOSTNAME
 EOF
 
-echo $HOSTNAME > /etc/hostname
+echo $NEW_HOSTNAME > /etc/hostname
 
 # Set Root password
 echo Set Root Password

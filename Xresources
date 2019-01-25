@@ -1,0 +1,37 @@
+!! The default colors are "Gruvbox":
+*.color0: #1d2021
+*.color1: #cc241d
+*.color2: #98971a
+*.color3: #d79921
+*.color4: #458588
+*.color5: #b16286
+*.color6: #689d6a
+*.color7: #a89984
+*.color8: #928374
+*.color9: #fb4934
+*.color10: #b8bb26
+*.color11: #fabd2f
+*.color12: #83a598
+*.color13: #d3869b
+*.color14: #8ec07c
+*.color15: #ebdbb2
+
+urxvt*termName:		rxvt-256color
+urxvt*geometry:		150x38
+urxvt*scrollBar:	false
+urxvt*iso14755:		false
+urxvt*font:		xft:DejaVu Sans Mono:pixelsize=14
+urxvt*boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=14
+urxvt*italicFont:	xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=14
+urxvt*boldItalicFont:	xft:Bitstream Vera Sans Mono:bold:autohint=true:pixelsize=14
+urxvt*letterSpace:	-1
+urxvt*borderColor:	#000030
+urxvt*internalBorder:	1
+urxvt*loginShell:	true
+urxvt*background:	Black
+urxvt*foreground:	White
+urxvt*colorUL:		Yellow
+urxvt.underlineColor:	Yellow
+
+! Prompt
+PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\[\033[01;37m\]$ \[\033[00m\]'

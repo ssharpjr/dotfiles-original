@@ -33,7 +33,7 @@ timedatectl set-ntp true
 # mount /dev/sda1 /mnt/efi
 
 # Pacstrap the system
-pacstrap /mnt base base-devel vim networkmanager intel-ucode grub efibootmgr
+pacstrap /mnt base base-devel vim networkmanager intel-ucode grub efibootmgr git
 
 # Generate the fstab
 genfstab -U /mnt >>/mnt/etc/fstab

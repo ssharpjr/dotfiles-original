@@ -20,12 +20,13 @@
 
 ### BEGIN ###
 NEW_HOSTNAME="archtest"
+NEW_USER="ssharp"
 
 # Set Locale and Language
 ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc
 sed -i "s/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" /etc/locale.gen
-
+locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 cat <<EOF > /etc/hosts
 127.0.0.1    localhost
@@ -35,9 +36,16 @@ EOF
 
 echo $NEW_HOSTNAME > /etc/hostname
 
+# Start Networking
+systemctl start NetworkManager
+systemctl enable NetworkManager
+
 # Set Root password
 echo Set Root Password
 passwd
+
+# Create new user
+useradd -m -G wheel $NEW_USER
 
 # Install GRUB
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB --removable

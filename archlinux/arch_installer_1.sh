@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# arch_installer_1.sh
+
 # Automate basic Arch Linux install steps
 
 # You are expected to complete the following step manually PRIOR to running this script.
@@ -37,11 +39,11 @@ pacstrap /mnt base base-devel vim networkmanager intel-ucode grub efibootmgr git
 # Generate fstab
 genfstab -U /mnt /mnt/etc/fstab
 
-# Copy the arch_installer.sh script to the new /root.
-cp arch_installer.sh arch_package_installer.sh /mnt/root
+# Copy files to the new root.
+cp arch_*.sh /mnt/root; chmod +x /mnt/root arch_*.sh
 
 echo
 echo Manually run the following commands:
-echo arch-chroot /mnt
-echo ./arch_installer.sh
+echo "arch-chroot /mnt"
+echo "./arch_installer_2.sh"
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# arch_installer_2.sh
+
 # Automate basic Arch Linux install steps
 
 # You are expected to complete the following step manually PRIOR to running this script.
@@ -13,7 +15,8 @@
 #   - Partition 1: up to 500MB (550MB MAX), Type: EFI
 #   - Partition 2: 4GB (or so), Type: Linux Swap
 #   - Partition 3: (Root), Type: Linux EXT4
-# - You have run pacstrap (arch_pacstrap.sh script for example)
+
+# - You have run pacstrap (arch_installer_1.sh script for example)
 # - You have run genfstab and arch-chroot.
 
 # This script should be in the new /root.

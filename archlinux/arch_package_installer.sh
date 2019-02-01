@@ -14,6 +14,6 @@ sudo pacman -S --noconfirm --needed \
 	ttf-bitstream-vera ttf-droid ttf-gentium ttf-liberation \
 	ttf-ubuntu-font-family adobe-source-code-pro-fonts vlc virtualbox \
 	virtualbox-host-dkms virtualbox-guest-iso clementine lame opus \
-	libvorbis ffmpeg shotwell gstreamer gst-plugins-bad \
+	libvorbis ffmpeg shotwell gstreamer gst-plugins-bad tree \
 	gst-plugins-base gst-plugins-base-libs gst-plugins-good \
 	gst-plugins-ugly xclip rxvt-unicode rxvt-unicode-terminfo urxvt-perls
